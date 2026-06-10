@@ -1,0 +1,45 @@
+# 官方 GitHub Pages 靜態網頁部署工作流
+name: Deploy static content to Pages
+
+on:
+  # 偵測 main 分支有 Push 時自動觸發
+  push:
+    branches: ["main"]
+
+  # 允許手動觸發
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 的權限，允許部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 避免重複部署，若有新的部署則取消舊的
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 單一部署任務
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (簽出程式碼)
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages (設定 Pages 環境)
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact (上傳打包網頁)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 上傳整個目錄
+          path: '.'
+          
+      - name: Deploy to GitHub Pages (部署至 Pages)
+        id: deployment
+        uses: actions/deploy-pages@v4
