@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WME-AIAP 萬芳教學部 AI 自動化平台</title>
+  <meta name="description" content="萬芳醫院教學部 AI 自動化平台 (WME-AIAP) - 專為醫學教育設計的自動化工具入口網站。包含內容效度分析系統 (CVI計算) 與教學資源管理系統 (ERMS)。">
+  
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="WME-AIAP 萬芳教學部 AI 自動化平台">
+  <meta property="og:description" content="萬芳醫院教學部 AI 自動化平台 - 協助臨床教師與醫學學員的自動化教學工具庫。">
+  <meta property="og:type" content="website">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome for cute icons (optional, but good for hand-drawn vibe) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 筆記本裝飾線 -->
+  <div class="notebook-spine"></div>
+
+  <div class="app-container">
+    
+    <!-- 頁首 Header -->
+    <header class="main-header">
+      <div class="header-logo">
+        <i class="fa-solid fa-graduation-cap logo-icon"></i>
+        <span class="logo-text">WME-AIAP</span>
+      </div>
+      <div class="header-title-container">
+        <h1 class="main-title">萬芳教學部 AI 自動化平台</h1>
+        <p class="subtitle">Wanfang Medical Education AI Automation Platform</p>
+      </div>
+      <div class="header-decor">
+        <span class="decor-tag tag-orange">學習</span>
+        <span class="decor-tag tag-green">效率</span>
+        <span class="decor-tag tag-yellow">成長</span>
+      </div>
+    </header>
+
+    <!-- 主視覺區 Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-greeting"><span class="highlight">嗨！歡迎來到臨床教學工具箱</span> 👋</h2>
+        <p class="hero-desc">
+          這裡是由萬芳教學部專為臨床教師、研究人員與學員設計的 AI 自動化工具平台。我們將繁瑣的學術分析與教學資源整理流程自動化，讓您能將更多寶貴的時間專注於核心的教學傳承與醫學研究上。
+        </p>
+        <div class="hero-tip">
+          <i class="fa-regular fa-lightbulb tip-icon"></i>
+          <span>點選下方卡片，即可快速進入相對應的工具系統開始使用喔！</span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="images/hero.png" alt="萬芳教學部醫學教育插畫" class="hero-image">
+      </div>
+    </section>
+
+    <!-- 工具卡片區 Tools Section -->
+    <section class="tools-section">
+      <div class="section-title-container">
+        <h3 class="section-title"><i class="fa-solid fa-cubes"></i> 我們的自動化工具</h3>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- 卡片 1: 內容效度分析系統 -->
+        <article class="tool-card validity-card" id="card-validity">
+          <div class="card-image-container">
+            <img src="images/validity.png" alt="內容效度分析系統插圖" class="card-image">
+          </div>
+          <div class="card-body">
+            <span class="card-badge badge-coral">學術研究工具</span>
+            <h4 class="card-title">內容效度分析系統</h4>
+            <p class="card-desc">
+              協助醫學教育與學術研究者進行量表或問卷的內容效度檢定。系統支援<strong>專家評分資料快速匯入</strong>、自動計算項目級 <strong>I-CVI</strong> 與量表級 <strong>S-CVI</strong>，並匯整專家意見。一鍵生成符合學術投稿標準的效度報告，讓研究工具的信效度建立流程更加嚴謹與高效。
+            </p>
+            <div class="card-features">
+              <span class="feature-tag"><i class="fa-solid fa-calculator"></i> CVI 自動計算</span>
+              <span class="feature-tag"><i class="fa-solid fa-file-export"></i> 匯出分析報告</span>
+              <span class="feature-tag"><i class="fa-solid fa-user-check"></i> 專家一致性</span>
+            </div>
+            <a href="https://wcvas.zeabur.app/" target="_blank" rel="noopener noreferrer" class="card-btn btn-coral" id="btn-wcvas">
+              <span>進入效度分析系統</span>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 卡片 2: 教學資源管理系統 -->
+        <article class="tool-card resources-card" id="card-resources">
+          <div class="card-image-container">
+            <img src="images/resources.png" alt="教學資源管理系統插圖" class="card-image">
+          </div>
+          <div class="card-body">
+            <span class="card-badge badge-sage">行政教學輔助</span>
+            <h4 class="card-title">教學資源管理系統</h4>
+            <p class="card-desc">
+              為臨床教師與醫學學員打造的一站式資源協作中心。提供<strong>課程教材雲端化管理</strong>、教學大綱線上檢索、學習評量檔案追蹤等功能。透過直覺的分類介面與協作工具，打破空間限制，讓萬芳醫院寶貴的臨床醫學教學資源得以輕鬆共享與永續傳承。
+            </p>
+            <div class="card-features">
+              <span class="feature-tag"><i class="fa-solid fa-cloud-arrow-up"></i> 教材雲端管理</span>
+              <span class="feature-tag"><i class="fa-solid fa-magnifying-glass"></i> 教學大綱檢索</span>
+              <span class="feature-tag"><i class="fa-solid fa-book-open"></i> 檔案共享追蹤</span>
+            </div>
+            <a href="https://erms.zeabur.app/" target="_blank" rel="noopener noreferrer" class="card-btn btn-sage" id="btn-erms">
+              <span>進入教學資源系統</span>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 頁尾 Footer -->
+    <footer class="main-footer">
+      <div class="footer-divider"></div>
+      <p class="footer-text">
+        © 2026 萬芳醫院教學部 · 醫學教育 AI 自動化平台 (WME-AIAP)
+      </p>
+      <p class="footer-subtext">
+        為了更好的使用體驗，建議使用 Modern 瀏覽器開啟。本平台由萬芳教學部用心維護 📝
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
